@@ -1,30 +1,28 @@
-import { useState } from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Shop from "./pages/Shop";
-import Cart from "./pages/Cart";
+import { HelmetProvider } from "react-helmet-async";
 import "./App.css";
 
+// Lazy imports for components
+const Navbar = React.lazy(() => import("./components/Navbar"));
+const Home = React.lazy(() => import("./pages/Home"));
+const Shop = React.lazy(() => import("./pages/Shop"));
+const Cart = React.lazy(() => import("./pages/Cart"));
+
 const App = () => {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (product, quantity) => {
-    setCart((prevCart) => [
-      ...prevCart,
-      { ...product, quantity }
-    ]);
-  };
-
   return (
-    <Router>
-      <Navbar cartCount={cart.length} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop addToCart={addToCart} />} />
-        <Route path="/cart" element={<Cart cart={cart} />} />
-      </Routes>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </Suspense>
+      </Router>
+    </HelmetProvider>
   );
 };
 

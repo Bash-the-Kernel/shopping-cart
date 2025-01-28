@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import PropTypes from "prop-types";
 
 const Cart = ({ cart }) => {
   return (
-    <div>
+    <div className="cart">
+      <Helmet>
+        <title>Your Cart - Our Shop</title>
+        <meta name="description" content="View the items in your cart. Proceed to checkout or continue shopping." />
+      </Helmet>
       <h1>Your Cart</h1>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
