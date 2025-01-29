@@ -112,7 +112,7 @@ While building this project, I gained valuable experience in:
 ---
 
 ## **Live Demo**
-Check out the live demo of the project: [E-Commerce Shop on Vercel](https://your-vercel-app-url.vercel.app)
+Check out the live demo of the project: [E-Commerce Shop on Vercel]([https://your-vercel-app-url.vercel.app](https://shopping-cart-f6cr69nvy-bash-the-kernels-projects.vercel.app/shop))
 
 ---
 
