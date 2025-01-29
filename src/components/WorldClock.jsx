@@ -50,6 +50,7 @@ const WorldClock = () => {
         </motion.p>
 
         <select
+          aria-label="State"
           style={styles.selector}
           value={selectedTimezone}
           onChange={(e) => setSelectedTimezone(e.target.value)}
