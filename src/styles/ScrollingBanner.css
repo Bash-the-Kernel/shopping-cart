@@ -1,0 +1,36 @@
+/* Scrolling Banner Styles */
+.scrolling-banner {
+    width: 100vw;
+    overflow: hidden;
+    background: #1f1f1f;
+    color: #ffcc00;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.5rem 0;
+    position: relative;
+    border-top: 2px solid #ff6347; /* Optional: Add borders for styling */
+    border-bottom: 2px solid #ff6347;
+  }
+  
+  .banner-content {
+    display: inline-flex;
+    animation: scroll-banner 15s linear infinite;
+  }
+  
+  .banner-item {
+    margin: 0 2rem;
+    white-space: nowrap;
+  }
+  
+  /* Animation for scrolling effect */
+  @keyframes scroll-banner {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
