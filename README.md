@@ -104,7 +104,7 @@ Follow these steps to set up the project locally:
 ## **Screenshot**
 Here’s an example of the website in action:
 
-![Website Screenshot](./images/image.png)
+![Website Screenshot](./src/images/image.png)
 
 ---
 
