@@ -61,25 +61,76 @@ nav div {
 nav span {
   font-size: 1rem;
 }
-
-
 /* Home Page Styles */
 .home {
   padding: 2rem;
   text-align: center;
   flex: 1;
+  min-height: 100vh; /* Ensure home page fills the screen */
 }
 
 .home h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ffffff; /* Bright white for headings */
+  color: #ffffff;
 }
 
 .home p {
   font-size: 1.2rem;
-  color: #b0b0b0; /* Lighter gray for text */
+  color: #b0b0b0;
+  margin-bottom: 2rem;
 }
+
+/* Flexbox Container */
+.home-flex-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  padding-bottom: 5rem; /* Ensure space at the bottom */
+}
+
+/* Flexbox Items - Larger Boxes */
+.home-flex-item {
+  background-color: #1f1f1f;
+  padding: 3rem; /* Increase padding */
+  border-radius: 8px;
+  width: 80%; /* Make boxes wide but not full width */
+  max-width: 800px; /* Limit max width */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 400px; /* Ensure large height to force scrolling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+}
+
+.home-flex-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.home-flex-item h2 {
+  font-size: 2rem; /* Increase heading size */
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.home-flex-item p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+}
+
+/* Ensure scrolling */
+body {
+  overflow-y: auto;
+}
+
+/* Responsive Design */
+
+
 
 /* Shop Page Styles */
 .shop {
@@ -226,6 +277,14 @@ nav span {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .home-flex-container {
+    padding-bottom: 8rem; /* Extra padding for scrolling */
+  }
+
+  .home-flex-item {
+    width: 90%;
+    min-height: 300px; /* Adjust size for smaller screens */
+  }
   nav {
     flex-direction: column;
     padding: 1rem;
