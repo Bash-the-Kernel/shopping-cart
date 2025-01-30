@@ -101,6 +101,13 @@ Follow these steps to set up the project locally:
 
 ---
 
+## **Screenshot**
+Here’s an example of the website in action:
+
+![Website Screenshot](./images/image.png)
+
+---
+
 ## **Learning Outcomes**
 While building this project, I gained valuable experience in:
 - **React Fundamentals**: State management, hooks, and component lifecycle.
